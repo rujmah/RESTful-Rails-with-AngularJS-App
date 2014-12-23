@@ -1,0 +1,20 @@
+<h1>Artists &amp; Albums - NgApp</h1>
+<div ng-controller="ArtistCtrl">
+  <div>Test: {{test_string}}</div>
+  <div>
+    Artists: 
+    <ul>
+      <li ng-repeat="artist in artists"> 
+        <span ng-click="get_albums(artist.id)">
+          {{artist.name}}  ( {{artist.album_count}} )
+        </span>  
+      </li>
+    </ul>
+  </div>
+  <div ng-show="show_albums"> 
+    Albums:
+    <ul>
+      <li ng-repeat="album in albums"> {{album.title}} </li>
+    </ul>
+  </div>
+</div> 
